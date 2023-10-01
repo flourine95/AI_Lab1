@@ -5,10 +5,19 @@ public class AgentProgram {
         //TODO
         if (p.getLocationState().equals(Environment.LocationState.DIRTY)) {
             return Environment.SUCK_DIRT;
-        } else if (p.getAgentLocation().equals(Environment.LOCATION_A)) {
-            return Environment.MOVE_RIGHT;
         } else {
-            return Environment.MOVE_LEFT;
+            return randomAction();
         }
+
+    }
+    public Action randomAction() {
+        int randomNumber = (int) (Math.random() * 4);
+        return switch (randomNumber) {
+            case 0 -> Environment.MOVE_LEFT;
+            case 1 -> Environment.MOVE_RIGHT;
+            case 2 -> Environment.MOVE_UP;
+            case 3 -> Environment.MOVE_DOWN;
+            default -> Environment.SUCK_DIRT;
+        };
     }
 }
