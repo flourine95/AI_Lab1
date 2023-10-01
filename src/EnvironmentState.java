@@ -1,9 +1,6 @@
-package chapter2.agent_AB; 
 
 import java.util.HashMap;
 import java.util.Map;
-
-import chapter2.agent_AB.Environment.LocationState;
 
 public class EnvironmentState {
 	private Map<String, Environment.LocationState> state = new HashMap<String, Environment.LocationState>();
@@ -22,11 +19,11 @@ public class EnvironmentState {
 		return this.agentLocation;
 	}
 
-	public LocationState getLocationState(String location) {
+	public Environment.LocationState getLocationState(String location) {
 		return this.state.get(location);
 	}
 
-	public void setLocationState(String location, LocationState locationState) {
+	public void setLocationState(String location, Environment.LocationState locationState) {
 		this.state.put(location, locationState);
 	}
 

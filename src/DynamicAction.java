@@ -1,4 +1,3 @@
-package chapter2.agent_AB;
 
 public class DynamicAction extends Action {
 	private String name;

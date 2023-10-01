@@ -1,4 +1,3 @@
-package chapter2.agent_AB; 
 
 public class TestSimpleReflexAgent {
 	public static void main(String[] args) {
